@@ -1,0 +1,130 @@
+/*
+COLOR PALETTE
+BBBDF6
+9893DA
+797A9E
+72727E
+625F63
+*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: hsl(0, 0%, 100%);
+    background-image: url(images/blacksand.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.sidebar {
+    background-color: hsl(0, 0%, 12%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.sidebar img {
+    width: 200px;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.sidebar h1 {
+    margin: 10px 0;
+    font-size: 30px;
+    color: #ffffff;
+}
+.sidebar p {
+    font-size: 24px;
+    color: hsl(0, 0%, 8px);
+}
+.sidebar .contact {
+    margin-top: 20px;
+    font-size: 30px;
+    display: block;
+}
+.sidebar .contact a {
+    margin: 10px 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    color:#9893DA;
+    text-decoration: none;
+}
+.main-content {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+}
+.section {
+    background-color: hsl(0, 0%, 12%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.section h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #9893DA;
+}
+.section p {
+    color: hsl(0, 0%, 80%);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.skill-card div {
+    padding: 10px;
+    border-color: hsl(0, 0%, 12%);
+    border-radius: 5px;
+    text-align: center;
+}
+.skill-card {
+    background-color: hsl(0, 0%, 14%);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.project-card {
+    background-color: hsl(0, 0%, 14%);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.project-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+.project-card p {
+    font-size: 14px;
+    color: hsl(0, 0%, 80px);
+}
+.skill-card:hover .project-card:hover {
+    transform: 1.05;
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
