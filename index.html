@@ -1,208 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Aden Hilderbrand</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inconsolata&display=swap');
-
-  /* Global Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Inconsolata', monospace;
-    background: linear-gradient(135deg, #0a0f0b, #202422);
-    color: #b2f08c;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  /* Background animated matrix code effect */
-  #matrix-bg {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  canvas {
-    display: block;
-    width: 100%; height: 100vh;
-    background: #000;
-  }
-
-  /* Nav Bar */
-  nav {
-    position:fixed;
-    width: 100%;
-    background: rgba(20, 30, 20, 0.85);
-    backdrop-filter: saturate(180%) blur(10px);
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid #39ff14;
-    z-index: 100;
-  }
-
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 3rem;
-  }
-
-  nav ul li {
-    padding: 1rem 0;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    color: #b3f08c;
-    font-weight: 700;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.1rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.25s ease;
-  }
-
-  nav ul li a:hover,
-  nav ul li a.active {
-    background-color: #39ff14;
-    color: #0a0f0b;
-  }
-
-  /* Main Container */
-  .container {
-    max-width: 900px;
-    margin: 0rem auto 3rem;
-    padding: 5rem 2rem 0 2rem;
-  }
-
-  section {
-    margin-bottom: 4rem;
-  }
-
-  h1, h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #39ff14;
-    text-shadow: 0 0 6px #33cc00;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-    border-bottom: 2px solid #39ff14;
-    padding-bottom: 0.25rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    margin-bottom: .5rem;
-  }
-
-  .headshot {
-  display: block;
-  margin: 0 auto 1.2rem auto;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  box-shadow: 0 0 18px #39ff1499;
-  object-fit: cover;
-  border: 3px solid #39ff14;
-}
-
-  /* Intro */
-  .intro {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #dee8d2;
-    text-shadow: 0 0 5px #228b22cc;
-  }
-
-  /* Cards */
-  .card {
-    background: #232b23cc;
-    border: 1px solid #39ff14;
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 0 15px #39ff14aa;
-    transition: transform 0.2s ease;
-  }
-
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 25px #39ff14ee;
-  }
-
-  /* Skills list */
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem 1.2rem;
-  }
-
-  .skill-pill {
-    background: #39ff14cc;
-    color: #0a0f0b;
-    padding: 0.4rem 0.8rem;
-    border-radius: 14px;
-    font-weight: 700;
-    box-shadow: 0 0 10px #39ff14aa;
-  }
-
-  /* Project links and experience details */
-  a.project-link {
-    color: #39ff14;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  a.project-link:hover {
-    text-decoration: underline;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    color: #566f56;
-    font-size: 0.9rem;
-    padding: 2rem 1rem 3rem;
-  }
-
-  /* Responsive */
-  @media(max-width: 600px) {
-    h1 {
-      font-size: 2.4rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-    }
-
-    nav ul {
-      gap: 1.2rem;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aden Hilderbrand</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Matrix background -->
 <div id="matrix-bg"></div>
 
 <nav>
   <ul>
     <li><a href="#about" class="active">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
     <li><a href="#links">Links</a></li>
   </ul>
 </nav>
@@ -218,7 +31,6 @@
 
   <section id="experience">
     <h2>Experiences</h2>
-
     <div class="card">
       <h3>Ground School Data Manager - Embry Riddle</h3>
       <p>Provided technical support, maintained campus data security, and assisted with exam updates.</p>
@@ -228,15 +40,13 @@
       <p>Supported my team with timely security of critical system infrastructure by implementing systems backups during real-time red-team attacks.</p>
     </div> 
     <div class="card">
-	<h3>Honeywell / ERAU Joint Research Project</h3>
-      	<p>Partnering with Honeywell technical teams and ERAU faculty to design and evaluate cybersecurity solutions for embedded Linux platforms. Focus areas include secure boot, key management, and encrypted communications for advanced air mobility systems.</p>
+      <h3>Honeywell / ERAU Joint Research Project</h3>
+      <p>Partnering with Honeywell technical teams and ERAU faculty to design and evaluate cybersecurity solutions for embedded Linux platforms. Focus areas include secure boot, key management, and encrypted communications for advanced air mobility systems.</p>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="card">
-    </div>
     <div class="card">
       <h3><a href="#" class="project-link">Encrypted Chat Application</a></h3>
       <p>A secure, socket-based chat program using Python with RSA encryption for message privacy and threading for performance.</p>
@@ -255,13 +65,13 @@
       <span class="skill-pill">Go Programming</span>
       <span class="skill-pill">JavaScript</span>
       <span class="skill-pill">Linux</span>
-      <span class="skill-pill">Shell Scripting</span>
-      <span class="skill-pill">Network Security</span>
+      <span class="skill-pill">BASH / Shell Scripting</span>
+      <span class="skill-pill">Network Forensics</span>
       <span class="skill-pill">Cryptography</span>
       <span class="skill-pill">Threat Intelligence</span>
-      <span class="skill-pill">RSA Encryption</span>
       <span class="skill-pill">Wireshark</span>
-      <span class="skill-pill">NMAP</span>
+      <span class="skill-pill">KALI Suite Tools</span>
+      <span class="skill-pill">Volatility3</span>
       <span class="skill-pill">Autopsy</span>
     </div>
   </section>
@@ -280,75 +90,6 @@
   &copy; Aden Hilderbrand | 2025 Cyber Intelligence & Security | Embry Riddle Aeronautical University
 </footer>
 
-<script>
-  // Matrix effect canvas
-  const canvas = document.createElement('canvas');
-  document.getElementById('matrix-bg').appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*+-'.split('');
-  let fontSize = 14;
-  let columns;
-
-  function resize() {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-    columns = Math.floor(width / fontSize);
-    drops = [];
-    for (let x = 0; x < columns; x++) drops[x] = Math.random() * height;
-  }
-
-  let drops = [];
-  let frameCount = 0;
-  resize();
-  window.addEventListener('resize', resize);
-
-  function draw() {
-    frameCount++;
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-    ctx.fillRect(0, 0, width, height);
-
-    ctx.fillStyle = '#39ff14';
-    ctx.font = fontSize + 'px Orbitron, monospace';
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters[Math.floor(Math.random() * letters.length)];
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      if (drops[i] * fontSize > height && Math.random() > 0.975) drops[i] = 0;
-      if (frameCount % 4 == 0) drops[i]++;
-    }
-    requestAnimationFrame(draw);
-  }
-
-  draw();
-
-  // Smooth scroll and active nav link highlight
-  const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      const targetID = link.getAttribute('href').substring(1);
-      document.getElementById(targetID).scrollIntoView({behavior: 'smooth'});
-    });
-  });
-
-  window.addEventListener('scroll', () => {
-    const fromTop = window.scrollY + 70;
-    navLinks.forEach(link => {
-      const section = document.querySelector(link.hash);
-      if (
-        section.offsetTop <= fromTop &&
-        section.offsetTop + section.offsetHeight > fromTop
-      ) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
-    });
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
