@@ -32,28 +32,56 @@
   <section id="experience">
     <h2>Experiences</h2>
     <div class="card">
-      <h3>Ground School Data Manager - Embry Riddle</h3>
-      <p>Provided technical support, maintained campus data security, and assisted with exam updates.</p>
+      <h3>Ground School Data Manager — Embry-Riddle Aeronautical University</h3>
+      <p>Maintained FERPA-compliant records for hundreds of students per semester while enforcing data integrity, system accessibility, and compliance across proprietary academic platforms. Collaborated with adjunct faculty to implement updated security procedures and access controls. Applied SharePoint administration skills to streamline document workflows and ensure authorized-only access to confidential materials.</p>
     </div>
     <div class="card">
-      <h3>Server Backups Administrator - NCAE Cyber Challenge 2025</h3>
-      <p>Supported my team with timely security of critical system infrastructure by implementing systems backups during real-time red-team attacks.</p>
-    </div> 
-    <div class="card">
       <h3>Honeywell / ERAU Joint Research Project</h3>
-      <p>Partnering with Honeywell technical teams and ERAU faculty to design and evaluate cybersecurity solutions for embedded Linux platforms. Focus areas include secure boot, key management, and encrypted communications for advanced air mobility systems.</p>
+      <p>Partnering with Honeywell's engineering teams and ERAU faculty to design, evaluate, and integrate cybersecurity solutions for a high-constraint embedded Linux platform on an NXP RDB2 development board. Engineered encrypted wireless data transfer pipelines and key management schemes over BLE and WiFi targeting advanced air mobility (AAM) systems, directly confronting the challenge of applying enterprise-grade cryptographic standards to resource-constrained hardware.</p>
+    </div>
+    <div class="card">
+      <h3>Web Server Backups Administrator — NCAE Cyber Challenge 2025</h3>
+      <p>Served as dedicated Web Server Backups Administrator in a live red-team/blue-team competition, finishing 6th overall. Designed and managed backup pipelines for critical web server infrastructure using Rsync and Git, maintaining data integrity and rapid recovery capability while adversarial red-team operators conducted real-time attacks against live systems.</p>
+    </div>
+    <div class="card">
+      <h3>CyberEye Club — Vice President | Embry-Riddle Aeronautical University</h3>
+      <p>Served as Vice President of CyberEye, ERAU's cybersecurity student organization, coordinating technical workshops, competition team preparation, and member skill development initiatives. Supported club leadership in organizing events that bridged classroom theory with applied offensive and defensive security practice.</p>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="card">
+      <h3><a href="#" class="project-link">TracerFire13 — Cyber Threat Analyst</a></h3>
+      <p>Competed as a Cyber Threat Analyst alongside team <em>Placeholder</em> in TracerFire13, a live enterprise cyber-defense exercise contested by 34 teams across three institutions, finishing 6th overall. Leveraged Autopsy for digital forensics, Velociraptor for endpoint detection and live response, Microsoft Azure for cloud infrastructure analysis, and Malcolm for large-scale network packet capture and visualization to identify and attribute realistic adversary activity under a compressed operational timeline.</p>
+    </div>
+    <div class="card">
+      <h3><a href="#" class="project-link">Fail2ban Defensive Learning Lab — Published Lab Module</a></h3>
+      <p>Authored a complete, publication-ready defensive learning lab on SSH brute-force protection with Fail2ban, accepted for inclusion in <em>Mastering Enterprise Networks, 3rd Edition</em> by Professor Heath Van Horn (ERAU / Eagle Publications). Designed a three-machine GNS3 + VirtualBox lab environment (Ubuntu Server, Ubuntu Desktop, Kali Linux) and wrote end-to-end instructional content covering Fail2ban configuration, iptables-based automated banning, and live Hydra brute-force simulation against the rockyou.txt wordlist.</p>
+    </div>
+    <div class="card">
+      <h3><a href="#" class="project-link">Signal Metadata Exploit — RTT Side-Channel Research</a></h3>
+      <p>Implemented an exploit of the packet round-trip time (RTT) metadata leakage vulnerability in Signal Messenger, as documented in the <em>Careless Whisper</em> academic paper (arXiv:2411.11194). The attack exploits Signal's silent delivery receipt mechanism to infer a target's device activity state, daily schedule, number of active sessions, and OS fingerprint — all without generating any notification on the victim's device. Built entirely in shell scripting, integrating signal-cli and socat for raw socket communication.</p>
+    </div>
+    <div class="card">
+      <h3><a href="#" class="project-link">OnionFlation — Tor PoW Puzzle Inflation Attack Study</a></h3>
+      <p>Conducting an independent technical study of the OnionFlation attack class (USENIX Security 2025, "Onions Got Puzzled"), a critical vulnerability in Tor's proof-of-work client puzzle defense for onion services. The attack exploits routing asymmetry and Tor's 5-minute DHT update interval to artificially inflate puzzle difficulty for all connecting clients, rendering a targeted onion service unreachable at an attack cost of approximately $1.20 to spike and $0.10/hour to sustain. Analyzing all three documented attack strategies and evaluating proposed mitigations.</p>
+    </div>
+    <div class="card">
+      <h3><a href="#" class="project-link">DJI Drone Control Hijacking Research</a></h3>
+      <p>Researching and reproducing DJI drone control hijacking techniques based on the ibndias/dji-drone-hijacking methodology. Focus areas include wireless protocol analysis of DJI's OcuSync/Lightbridge control link, signal interception and injection to commandeer flight control authority, and mapping firmware and communication stack vulnerabilities that enable unauthenticated takeover of commercial UAS platforms. Applying RF analysis, packet capture, and embedded systems knowledge with direct relevance to aviation security and counter-UAS operations.</p>
+    </div>
+    <div class="card">
+      <h3><a href="#" class="project-link">NSA Codebreaker Challenge 2024 — Cybersecurity Analyst & Codebreaker</a></h3>
+      <p>Completed the NSA Codebreaker Challenge 2024, a multi-stage national cryptanalysis and reverse engineering competition requiring progressive exploitation of realistic, scenario-driven problems. Applied skills in binary analysis, applied cryptography, and scripted automation to advance through increasingly complex challenge tiers.</p>
+    </div>
+    <div class="card">
       <h3><a href="#" class="project-link">Encrypted Chat Application</a></h3>
-      <p>A secure, socket-based chat program using Python with RSA encryption for message privacy and threading for performance.</p>
+      <p>Designed and built a secure, socket-based chat application in Python implementing RSA public-key encryption for end-to-end message confidentiality and Python threading to handle concurrent client connections without blocking I/O. Gained practical experience in asymmetric key exchange, encrypted session establishment, and the performance trade-offs of RSA in a real-time messaging context.</p>
     </div>
     <div class="card">
       <h3><a href="#" class="project-link">Network Analysis Tool</a></h3>
-      <p>Developed a Bash script to monitor and analyze network connections and ports and writing the findings to a file for further inspection.</p>
+      <p>Developed a Bash shell script to enumerate and monitor active network connections and open ports on a Linux host, parsing raw socket and process data and writing structured findings to a file for offline inspection. Applied tools including netstat, ss, and lsof to automate network situational awareness for system administration and incident response workflows.</p>
     </div>
   </section>
 
@@ -66,6 +94,7 @@
       <span class="skill-pill">JavaScript</span>
       <span class="skill-pill">Linux</span>
       <span class="skill-pill">BASH / Shell Scripting</span>
+      <span class="skill-pill">PowerShell</span>
       <span class="skill-pill">Network Forensics</span>
       <span class="skill-pill">Cryptography</span>
       <span class="skill-pill">Threat Intelligence</span>
@@ -73,6 +102,16 @@
       <span class="skill-pill">KALI Suite Tools</span>
       <span class="skill-pill">Volatility3</span>
       <span class="skill-pill">Autopsy</span>
+      <span class="skill-pill">Velociraptor</span>
+      <span class="skill-pill">Ghidra / GDB</span>
+      <span class="skill-pill">Docker</span>
+      <span class="skill-pill">GNS3 / VirtualBox</span>
+      <span class="skill-pill">RF / Wireless Analysis</span>
+      <span class="skill-pill">Secure Boot</span>
+      <span class="skill-pill">Key Management</span>
+      <span class="skill-pill">BLE / WiFi</span>
+      <span class="skill-pill">Microsoft Azure</span>
+      <span class="skill-pill">RHCSA Certified</span>
     </div>
   </section>
 
