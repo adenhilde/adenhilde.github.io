@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage[letterpaper, margin=0.6in]{geometry}
+\usepackage[letterpaper, margin=0.55in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -9,7 +9,7 @@
 \usepackage[scaled=0.92]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\definecolor{accent}{HTML}{2F4C8C}
+\definecolor{accent}{HTML}{000000}
 \definecolor{dimtext}{HTML}{555555}
 
 \pagestyle{empty}
@@ -19,26 +19,26 @@
 \titleformat{\section}
   {\normalfont\large\bfseries\color{accent}}
   {}{0em}{}
-  [\vspace{-0.05em}{\color{accent}\hrule height 0.8pt}\vspace{0.35em}]
-\titlespacing*{\section}{0pt}{0.65em}{0.15em}
+  [\vspace{-0.05em}{\color{accent}\hrule height 0.8pt}\vspace{0.2em}]
+\titlespacing*{\section}{0pt}{0.4em}{0.1em}
 
 \newcommand{\role}[4]{%
   \textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\
-  \textit{\small #3} \hfill \textcolor{dimtext}{\small #4}\\[0.15em]
+  \textit{\small #3} \hfill \textcolor{dimtext}{\small #4}\\[0.00em]
 }
 
-\newcommand{\proj}[2]{\textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\[0.15em]}
+\newcommand{\proj}[2]{\textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\[0.02em]}
 
-\newcommand{\jobexp}[3]{\textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\ \textcolor{dimtext}{\small #3}\\[0.15em]}
+\newcommand{\jobexp}[3]{\textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\ \textcolor{dimtext}{\small #3}\\[0.00em]}
 
-\newcommand{\tags}[1]{\vspace{0.15em}\textcolor{dimtext}{\footnotesize \textit{#1}}\\[0.18em]}
+\newcommand{\tags}[1]{\vspace{0.00em}\textcolor{dimtext}{\footnotesize \textit{#1}}\\[0.08em]}
 
 \setlist[itemize]{leftmargin=1.1em, itemsep=0pt, topsep=0pt, parsep=0pt}
 
 \begin{document}
 
 \begin{center}
-  {\Huge \textbf{Aden Hilderbrand}}\\[0.3em]
+  {\Huge \textbf{Aden Hilderbrand}}\\[0.15em]
   {\small
     Phoenix, AZ \;\textbullet\; \href{mailto:adenhilde04@gmail.com}{adenhilde04@gmail.com} \;\textbullet\;
     \href{https://linkedin.com/in/ahilderbrand}{linkedin.com/in/ahilderbrand} \;\textbullet\;
@@ -46,7 +46,7 @@
     \href{https://adenhilde.github.io}{adenhilde.github.io}
   }
 \end{center}
-\vspace{0.3em}
+\vspace{0.1em}
 
 \section*{Education}
 \role{Embry-Riddle Aeronautical University}{Anticipated May 2027}{B.S. Cyber Intelligence \& Security}{Prescott, AZ}
@@ -84,13 +84,14 @@ GPA 3.86/4.0 \;\textbullet\; Dean's List: Fall 2024, Spring 2025, Fall 2025 \;\t
 \end{itemize}
 \tags{Embedded Linux, NXP RDB2, BLE/WiFi, Key Management, Applied Cryptography}
 
-\proj{CyberAUTO Summit --- Automotive Penetration Testing}{}
+\proj{CyberAUTO Summit --- Automotive Penetration Testing}{July 2026}
 \begin{itemize}
-  \item Conducted hands-on penetration testing against real-world automotive systems on a 10-person team, tapping CAN bus traffic (SocketCAN, SavvyCAN, python-can, OBD-II) and assessing EV/EVSE charging infrastructure.
+  \item Simulated hands-on penetration testing against real-world automotive systems on a 10-person team, tapping CAN bus traffic (SocketCAN, SavvyCAN, python-can, OBD-II) and assessing EV/EVSE charging infrastructure.
   \item Exploited onboard and infrastructure web services (Burp Suite, pwntools, Scapy, XSS/SQLi) and reverse-engineered hardware down to the chip (JTAG, SOIC-8, chip-off extraction).
   \item Pulled forensic artifacts with Berla iVe and probed RF/BLE attack surface via SDR tooling (GNURadio, HackRF, nRF Connect).
+  \item Engaged in real-world penetration testing of proprietary products and systems under NDA, presenting potential vulnerabilities and exploits to a conference of fellow engineers and professionals in an easy to understand and concise manner.
 \end{itemize}
-\tags{SocketCAN, python-can, OBD-II, EV/EVSE, Burp Suite, JTAG, Berla iVe, GNURadio, HackRF, GDB, Ghidra}
+\tags{Wireshark, NMAP, Netcat, Python, SocketCAN, OBD-II, EV/EVSE, Burp Suite, JTAG, Berla iVe, GNURadio, HackRF, GDB, Ghidra}
 
 \proj{TracerFire13 --- Cyber Threat Analyst}{6th of 34 teams}
 \begin{itemize}
@@ -112,13 +113,6 @@ GPA 3.86/4.0 \;\textbullet\; Dean's List: Fall 2024, Spring 2025, Fall 2025 \;\t
   \item Applied binary analysis, applied cryptography, and scripted automation to advance through increasingly complex challenge tiers.
 \end{itemize}
 \tags{GDB, Ghidra, Python, Applied Cryptography}
-
-\proj{Encrypted Chat Application}{}
-\begin{itemize}
-  \item Built a secure, socket-based chat application in Python implementing RSA public-key encryption for end-to-end confidentiality.
-  \item Used multithreading to handle concurrent client connections without blocking I/O.
-\end{itemize}
-\tags{Python, RSA, Socket Programming, Multithreading}
 
 \proj{Signal Metadata Exploit --- RTT Side-Channel Research}{}
 \begin{itemize}
