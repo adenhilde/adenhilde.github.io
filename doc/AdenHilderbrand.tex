@@ -1,137 +1,221 @@
-\documentclass[11pt]{article}
+%-------------------------
+% Resume in Latex
+% Based on: Jake's Resume template (Jake Gutierrez)
+% Content ported from Aden_Hilderbrand.tex
+%------------------------
 
-\usepackage[letterpaper, margin=0.55in]{geometry}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% --- fonts (ported from Aden_Hilderbrand.tex) ---
 \usepackage[T1]{fontenc}
 \usepackage[scaled=0.92]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\definecolor{accent}{HTML}{000000}
-\definecolor{dimtext}{HTML}{555555}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
 
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
 \titleformat{\section}
-  {\normalfont\large\bfseries\color{accent}}
+  {\normalfont\large\bfseries\color{black}}
   {}{0em}{}
-  [\vspace{-0.05em}{\color{accent}\hrule height 0.8pt}\vspace{0.2em}]
-\titlespacing*{\section}{0pt}{0.4em}{0.1em}
+  [\vspace{-0.05em}{\color{black}\hrule height 0.8pt}\vspace{0.2em}]
 
-\newcommand{\role}[4]{%
-  \textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\
-  \textit{\small #3} \hfill \textcolor{dimtext}{\small #4}\\[0.00em]
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-\newcommand{\proj}[2]{\textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\[0.02em]}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\newcommand{\jobexp}[3]{\textbf{#1} \hfill \textcolor{dimtext}{\small #2}\\ \textcolor{dimtext}{\small #3}\\[0.00em]}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\newcommand{\tags}[1]{\vspace{0.00em}\textcolor{dimtext}{\footnotesize \textit{#1}}\\[0.08em]}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\setlist[itemize]{leftmargin=1.1em, itemsep=0pt, topsep=0pt, parsep=0pt}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%
 
 \begin{document}
 
+%----------HEADING----------
 \begin{center}
-  {\Huge \textbf{Aden Hilderbrand}}\\[0.15em]
-  {\small
-    Phoenix, AZ \;\textbullet\; \href{mailto:adenhilde04@gmail.com}{adenhilde04@gmail.com} \;\textbullet\;
-    \href{https://linkedin.com/in/ahilderbrand}{linkedin.com/in/ahilderbrand} \;\textbullet\;
-    \href{https://github.com/adenhilde}{github.com/adenhilde} \;\textbullet\;
-    \href{https://adenhilde.github.io}{adenhilde.github.io}
-  }
+    \textbf{\Huge \scshape Aden Hilderbrand} \\ \vspace{1pt}
+    \small Phoenix, AZ $|$
+    \href{mailto:adenhilde04@gmail.com}{\underline{adenhilde04@gmail.com}} $|$
+    \href{https://linkedin.com/in/ahilderbrand}{\underline{linkedin.com/in/ahilderbrand}} $|$
+    \href{https://github.com/adenhilde}{\underline{github.com/adenhilde}} $|$
+    \href{https://adenhilde.github.io}{\underline{adenhilde.github.io}}
 \end{center}
-\vspace{0.1em}
 
-\section*{Education}
-\role{Embry-Riddle Aeronautical University}{Anticipated May 2027}{B.S. Cyber Intelligence \& Security}{Prescott, AZ}
-GPA 3.86/4.0 \;\textbullet\; Dean's List: Fall 2024, Spring 2025, Fall 2025 \;\textbullet\; Red Hat Certified System Administrator (RHCSA)
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Embry-Riddle Aeronautical University}{Prescott, AZ}
+      {B.S. Cyber Intelligence \& Security}{Anticipated May 2027}
+    \resumeItemListStart
+      \resumeItem{GPA 3.86/4.0 $|$ Dean's List: Fall 2024, Spring 2025, Fall 2025 $|$ Red Hat Certified System Administrator (RHCSA)}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-\section*{Experience}
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
 
-\jobexp{Embedded Cyber Security Software Engineer --- Honeywell Aerospace}{May 2026 -- Aug. 2026}{Phoenix, AZ}
-\begin{itemize}
-  \item Hardened embedded software security posture on aerospace flight systems, designing and implementing API endpoints on a lighttpd/FastCGI stack for inter-process and inter-device communication.
-  \item Built iOS companion tooling in Swift bridging proprietary avionics systems and mobile devices, connecting the FastCGI API layer to a BLE GATT server and HTTPS file-transfer channel for secure on-device data exchange.
-  \item Developed embedded Bluetooth functionality and integrated hardware-received ADS-B and GPS data feeds into proprietary flight-adjacent software; contributed directly to production codebases in C++ and Bash.
-  \item Tracked requirements and deliverables through JIRA and DOORS and maintained documentation in Confluence; ran regular sync meetings to keep sprint objectives on track.
-\end{itemize}
-\tags{C++, Bash, Swift, lighttpd/FastCGI, BLE/GATT, ADS-B, GPS, JIRA, DOORS, Confluence}
+    \resumeSubheading
+      {Embedded Cyber Security Software Engineer}{Phoenix, AZ}
+      {Honeywell Aerospace}{May 2026 -- Aug. 2026}
+      \resumeItemListStart
+        \resumeItem{Hardened embedded software security posture on aerospace flight systems, designing and implementing API endpoints on a lighttpd/FastCGI stack for inter-process and inter-device communication.}
+        \resumeItem{Built iOS companion tooling in Swift bridging proprietary avionics systems and mobile devices, connecting the FastCGI API layer to a BLE GATT server and HTTPS file-transfer channel for secure on-device data exchange.}
+        \resumeItem{Developed embedded Bluetooth functionality and integrated hardware-received ADS-B and GPS data feeds into proprietary flight-adjacent software; contributed directly to production codebases in C++ and Bash.}
+        \resumeItem{Tracked requirements and deliverables through JIRA and DOORS and maintained documentation in Confluence; ran regular sync meetings to keep sprint objectives on track.}
+        \resumeItem{\textit{\small Tools: C++, Bash, Swift, lighttpd/FastCGI, BLE/GATT, ADS-B, GPS, JIRA, DOORS, Confluence}}
+      \resumeItemListEnd
 
-\jobexp{Ground School Data Manager --- Embry-Riddle Aeronautical University}{Oct. 2025 -- May 2026}{Prescott, AZ}
-\begin{itemize}
-  \item Maintained FERPA-compliant records for 300+ students per semester, enforcing data integrity, system accessibility, and compliance across proprietary academic platforms.
-  \item Administered SharePoint to streamline document workflows and enforce authorized-only access to confidential exam and student record data; supported faculty on updated access-control procedures.
-\end{itemize}
-\tags{SharePoint Administration, FERPA Compliance, Access Control}
+    \resumeSubheading
+      {Ground School Data Manager}{Prescott, AZ}
+      {Embry-Riddle Aeronautical University}{Oct. 2025 -- May 2026}
+      \resumeItemListStart
+        \resumeItem{Maintained FERPA-compliant records for 300+ students per semester, enforcing data integrity, system accessibility, and compliance across proprietary academic platforms.}
+        \resumeItem{Administered SharePoint to streamline document workflows and enforce authorized-only access to confidential exam and student record data; supported faculty on updated access-control procedures.}
+        \resumeItem{\textit{\small Tools: SharePoint Administration, FERPA Compliance, Access Control}}
+      \resumeItemListEnd
 
-\jobexp{Front of Store Specialist \& Trainer --- Target Corp.}{Oct. 2021 -- Jan. 2026}{Phoenix, AZ}
-\begin{itemize}
-  \item Led onboarding and training for a dozen+ new hires, developing instructional procedures that accelerated ramp-up and improved team consistency; served as escalation point for roughly 400 customer interactions per week.
-\end{itemize}
+    \resumeSubheading
+      {Front of Store Specialist \& Trainer}{Phoenix, AZ}
+      {Target Corp.}{Oct. 2021 -- Jan. 2026}
+      \resumeItemListStart
+        \resumeItem{Led onboarding and training for a dozen+ new hires, developing instructional procedures that accelerated ramp-up and improved team consistency; served as escalation point for roughly 400 customer interactions per week.}
+      \resumeItemListEnd
 
-\section*{Projects}
+  \resumeSubHeadingListEnd
 
-\proj{Honeywell / ERAU Undergraduate Research Project}{Oct. 2025 -- May 2026}
-\begin{itemize}
-  \item Engineered encrypted wireless data transfer pipelines and key management schemes over BLE/WiFi for a high-constraint embedded Linux platform (NXP RDB2) targeting advanced air mobility systems.
-  \item Applied enterprise-grade cryptographic standards to resource-constrained hardware in a regulated aviation domain, coordinating directly with Honeywell engineers and ERAU faculty.
-\end{itemize}
-\tags{Embedded Linux, NXP RDB2, BLE/WiFi, Key Management, Applied Cryptography}
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
 
-\proj{CyberAUTO Summit --- Automotive Penetration Testing}{July 2026}
-\begin{itemize}
-  \item Simulated hands-on penetration testing against real-world automotive systems on a 10-person team, tapping CAN bus traffic (SocketCAN, SavvyCAN, python-can, OBD-II) and assessing EV/EVSE charging infrastructure.
-  \item Exploited onboard and infrastructure web services (Burp Suite, pwntools, Scapy, XSS/SQLi) and reverse-engineered hardware down to the chip (JTAG, SOIC-8, chip-off extraction).
-  \item Pulled forensic artifacts with Berla iVe and probed RF/BLE attack surface via SDR tooling (GNURadio, HackRF, nRF Connect).
-  \item Engaged in real-world penetration testing of proprietary products and systems under NDA, presenting potential vulnerabilities and exploits to a conference of fellow engineers and professionals in an easy to understand and concise manner.
-\end{itemize}
-\tags{Wireshark, NMAP, Netcat, Python, SocketCAN, OBD-II, EV/EVSE, Burp Suite, JTAG, Berla iVe, GNURadio, HackRF, GDB, Ghidra}
+      \resumeProjectHeading
+          {\textbf{Honeywell / ERAU Undergraduate Research Project}}{Oct. 2025 -- May 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered encrypted wireless data transfer pipelines and key management schemes over BLE/WiFi for a high-constraint embedded Linux platform (NXP RDB2) targeting advanced air mobility systems.}
+            \resumeItem{Applied enterprise-grade cryptographic standards to resource-constrained hardware in a regulated aviation domain, coordinating directly with Honeywell engineers and ERAU faculty.}
+            \resumeItem{\textit{\small Tools: Embedded Linux, NXP RDB2, BLE/WiFi, Key Management, Applied Cryptography}}
+          \resumeItemListEnd
 
-\proj{TracerFire13 --- Cyber Threat Analyst}{6th of 34 teams}
-\begin{itemize}
-  \item Identified and attributed adversary activity in a live enterprise cyber-defense exercise under a compressed operational timeline.
-  \item Leveraged endpoint detection, cloud infrastructure analysis, and network packet capture tooling to trace realistic attacker behavior.
-\end{itemize}
-\tags{Autopsy, Velociraptor, Microsoft Azure, Malcolm}
+      \resumeProjectHeading
+          {\textbf{CyberAUTO Summit --- Automotive Penetration Testing}}{July 2026}
+          \resumeItemListStart
+            \resumeItem{Simulated hands-on penetration testing against real-world automotive systems on a 10-person team, tapping CAN bus traffic (SocketCAN, SavvyCAN, python-can, OBD-II) and assessing EV/EVSE charging infrastructure.}
+            \resumeItem{Exploited onboard and infrastructure web services (Burp Suite, pwntools, Scapy, XSS/SQLi) and reverse-engineered hardware down to the chip (JTAG, SOIC-8, chip-off extraction).}
+            \resumeItem{Pulled forensic artifacts with Berla iVe and probed RF/BLE attack surface via SDR tooling (GNURadio, HackRF, nRF Connect).}
+            \resumeItem{Engaged in real-world penetration testing of proprietary products and systems under NDA, presenting potential vulnerabilities and exploits to a conference of fellow engineers and professionals in an easy to understand and concise manner.}
+            \resumeItem{\textit{\small Tools: Wireshark, NMAP, Netcat, Python, SocketCAN, OBD-II, EV/EVSE, Burp Suite, JTAG, Berla iVe, GNURadio, HackRF, GDB, Ghidra}}
+          \resumeItemListEnd
 
-\proj{Fail2ban Defensive Learning Lab --- Published Lab Module}{}
-\begin{itemize}
-  \item Authored a publication-ready lab on SSH brute-force protection, accepted into \textit{Mastering Enterprise Networks, 3rd Edition} (ERAU / Eagle Publications).
-  \item Built a three-machine GNS3 + VirtualBox environment and wrote instructional content covering Fail2ban, iptables automated banning, and live Hydra brute-force simulation.
-\end{itemize}
-\tags{Fail2ban, iptables, Hydra, GNS3, VirtualBox, SSH Hardening}
+      \resumeProjectHeading
+          {\textbf{TracerFire13 --- Cyber Threat Analyst}}{6th of 34 teams}
+          \resumeItemListStart
+            \resumeItem{Identified and attributed adversary activity in a live enterprise cyber-defense exercise under a compressed operational timeline.}
+            \resumeItem{Leveraged endpoint detection, cloud infrastructure analysis, and network packet capture tooling to trace realistic attacker behavior.}
+            \resumeItem{\textit{\small Tools: Autopsy, Velociraptor, Microsoft Azure, Malcolm}}
+          \resumeItemListEnd
 
-\proj{NSA Codebreaker Challenge 2024}{}
-\begin{itemize}
-  \item Advanced through a multi-stage national cryptanalysis and reverse-engineering competition requiring progressive exploitation of realistic, scenario-driven problems.
-  \item Applied binary analysis, applied cryptography, and scripted automation to advance through increasingly complex challenge tiers.
-\end{itemize}
-\tags{GDB, Ghidra, Python, Applied Cryptography}
+      \resumeProjectHeading
+          {\textbf{Fail2ban Defensive Learning Lab --- Published Lab Module}}{}
+          \resumeItemListStart
+            \resumeItem{Authored a publication-ready lab on SSH brute-force protection, accepted into \textit{Mastering Enterprise Networks, 3rd Edition} (ERAU / Eagle Publications).}
+            \resumeItem{Built a three-machine GNS3 + VirtualBox environment and wrote instructional content covering Fail2ban, iptables automated banning, and live Hydra brute-force simulation.}
+            \resumeItem{\textit{\small Tools: Fail2ban, iptables, Hydra, GNS3, VirtualBox, SSH Hardening}}
+          \resumeItemListEnd
 
-\proj{Signal Metadata Exploit --- RTT Side-Channel Research}{}
-\begin{itemize}
-  \item Implemented an exploit of the packet round-trip-time metadata leak in Signal Messenger documented in the \textit{Careless Whisper} paper (arXiv:2411.11194).
-  \item Inferred a target's device activity and session state from delivery-receipt timing alone, with no notification generated on the victim's device.
-\end{itemize}
-\tags{signal-cli, socat, Bash, Side-Channel Analysis}
+      \resumeProjectHeading
+          {\textbf{NSA Codebreaker Challenge 2024}}{}
+          \resumeItemListStart
+            \resumeItem{Advanced through a multi-stage national cryptanalysis and reverse-engineering competition requiring progressive exploitation of realistic, scenario-driven problems.}
+            \resumeItem{Applied binary analysis, applied cryptography, and scripted automation to advance through increasingly complex challenge tiers.}
+            \resumeItem{\textit{\small Tools: GDB, Ghidra, Python, Applied Cryptography}}
+          \resumeItemListEnd
 
-\proj{CyberEye Club --- Vice President, Embry-Riddle Aeronautical University}{}
-\begin{itemize}
-  \item Coordinated technical workshops, competition team preparation, and skill-development initiatives for ERAU's cybersecurity student organization.
-  \item Bridged classroom theory with applied offensive and defensive security practice for a competition-ready membership.
-\end{itemize}
-\tags{Leadership, Event Coordination, Technical Mentorship}
+      \resumeProjectHeading
+          {\textbf{Signal Metadata Exploit --- RTT Side-Channel Research}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented an exploit of the packet round-trip-time metadata leak in Signal Messenger documented in the \textit{Careless Whisper} paper (arXiv:2411.11194).}
+            \resumeItem{Inferred a target's device activity and session state from delivery-receipt timing alone, with no notification generated on the victim's device.}
+            \resumeItem{\textit{\small Tools: signal-cli, socat, Bash, Side-Channel Analysis}}
+          \resumeItemListEnd
 
-\section*{Additional Skills}
-\textbf{Languages:} Python, C, C++, Go, Bash/Shell, PowerShell, JavaScript, Swift\\
-\textbf{Systems:} Linux (Ubuntu, Kali, RHEL), Windows, UNIX Administration, Docker, Embedded Linux\\
-\textbf{Security Tools:} Wireshark, Ghidra, GDB, Autopsy, FTK Imager, Volatility3, Velociraptor, Malcolm, Hydra, Fail2ban\\
-\textbf{Networking \& Crypto:} iptables, SSH Hardening, RF/Wireless Analysis, BLE/WiFi, Asymmetric/Symmetric Cryptography, Key Management, Secure Boot
+      \resumeProjectHeading
+          {\textbf{CyberEye Club --- Vice President, Embry-Riddle Aeronautical University}}{}
+          \resumeItemListStart
+            \resumeItem{Coordinated technical workshops, competition team preparation, and skill-development initiatives for ERAU's cybersecurity student organization.}
+            \resumeItem{Bridged classroom theory with applied offensive and defensive security practice for a competition-ready membership.}
+            \resumeItem{\textit{\small Tools: Leadership, Event Coordination, Technical Mentorship}}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------RELEVANT QUALIFICATIONS-----------
+\section{Relevant Qualifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, C++, Go, Bash/Shell, PowerShell, JavaScript, Swift} \\
+     \textbf{Systems}{: Linux (Ubuntu, Kali, RHEL), Windows, UNIX Administration, Docker, Embedded Linux} \\
+     \textbf{Security Tools}{: Wireshark, Ghidra, GDB, Autopsy, FTK Imager, Volatility3, Velociraptor, Malcolm, Hydra, Fail2ban} \\
+     \textbf{Networking \& Crypto}{: iptables, SSH Hardening, RF/Wireless Analysis, BLE/WiFi, Asymmetric/Symmetric Cryptography, Key Management, Secure Boot}
+    }}
+ \end{itemize}
 
 \end{document}
